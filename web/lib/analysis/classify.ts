@@ -6,8 +6,17 @@ type Indicator = {
   score: number;
 };
 
+type AnalysisTopic =
+  | "exit_penalty"
+  | "exit_general"
+  | "renewal"
+  | "costs"
+  | "guarantees"
+  | "liability"
+  | "other";
+
 type RiskRule = {
-  topic: string;
+  topic: AnalysisTopic;
   title: string;
   level: RiskLevel;
   explanation: string;
@@ -22,7 +31,7 @@ type RiskRule = {
 };
 
 type ReviewRule = {
-  topic: string;
+  topic: AnalysisTopic;
   title: string;
   explanation: string;
   recommendation: string;
@@ -925,8 +934,9 @@ function getBestClauseForRule(
   return best;
 }
 
-function mapConfirmedTopic(title: string) {
-  if (title === "Penalización económica por salida anticipada") return "exit_penalty";
+function mapConfirmedTopic(title: string): AnalysisTopic {
+  if (title === "Penalización económica por salida anticipada")
+    return "exit_penalty";
   if (title === "Desistimiento o salida anticipada") return "exit_general";
   if (title === "Renovación automática") return "renewal";
   if (title === "Gastos adicionales a cargo del inquilino") return "costs";
@@ -1064,5 +1074,7 @@ export function classifyWeakRentalSignals(
     }
   }
 
-  return reviewItems.sort((a, b) => a.page - b.page || a.title.localeCompare(b.title));
+  return reviewItems.sort(
+    (a, b) => a.page - b.page || a.title.localeCompare(b.title)
+  );
 }
