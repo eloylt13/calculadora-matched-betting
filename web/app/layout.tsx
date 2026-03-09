@@ -1,9 +1,46 @@
 import type { Metadata } from "next";
 
+const siteUrl = "https://analizador-alquiler.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Analizador de Alquiler",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Analizador de Alquiler",
+    template: "%s | Analizador de Alquiler",
+  },
   description:
     "Herramienta para revisar contratos de alquiler en PDF y detectar cláusulas sensibles antes de firmar.",
+  applicationName: "Analizador de Alquiler",
+  keywords: [
+    "contrato de alquiler",
+    "analizador contrato alquiler",
+    "revisar contrato alquiler",
+    "cláusulas alquiler",
+    "penalización salida anticipada",
+    "renovación automática alquiler",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Analizador de Alquiler",
+    title: "Analizador de Alquiler",
+    description:
+      "Revisa contratos de alquiler en PDF y detecta cláusulas sensibles antes de firmar.",
+    locale: "es_ES",
+  },
+  twitter: {
+    card: "summary",
+    title: "Analizador de Alquiler",
+    description:
+      "Revisa contratos de alquiler en PDF y detecta cláusulas sensibles antes de firmar.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
