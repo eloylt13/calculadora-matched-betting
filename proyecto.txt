@@ -1,0 +1,17 @@
+Proyecto: Analizador de riesgos de contratos de alquiler
+
+Usuario objetivo:
+Persona que va a alquilar un piso.
+
+Documento:
+Contrato de alquiler en PDF.
+
+Riesgos a detectar:
+1. Penalización por irse antes de tiempo
+2. Renovación automática
+3. Gastos adicionales poco claros
+4. Fianza o garantías elevadas
+5. Responsabilidad excesiva del inquilino
+
+Salida esperada:
+Color semáforo, explicación breve, página exacta, fragmento textual y recomendación orientativa.
