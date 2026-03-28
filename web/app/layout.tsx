@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = "https://calculadora-matched-betting.vercel.app";
@@ -6,9 +7,9 @@ const siteUrl = "https://calculadora-matched-betting.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title:
-    "Calculadora Matched Betting | Apuesta-Recibe, Free Bet, Reembolso y Dutcher",
+    "Calculadora Matched Betting Gratis | Apuesta-Recibe, Free Bet, Reembolso y Dutcher",
   description:
-    "Calculadora de matched betting con bloques de Apuesta-Recibe, Free Bet, Reembolso y Dutcher. Herramienta clara y práctica para ejecutar estrategias paso a paso.",
+    "Calculadora gratuita de matched betting para España. Calcula stakes, lay bets y beneficios en modos Apuesta-Recibe, Free Bet, Reembolso y Dutcher. Sin registro.",
   alternates: {
     canonical: "/",
   },
@@ -41,7 +42,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

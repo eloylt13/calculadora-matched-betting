@@ -491,7 +491,7 @@ export default function HomePage() {
       <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 sm:py-16 md:px-10">
         <div className="max-w-3xl">
           <span className="inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-sm font-medium text-cyan-300">
-            V1 · Calculadora web de matched betting
+            Calculadora web de matched betting
           </span>
 
           <h1 className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
@@ -1268,17 +1268,59 @@ export default function HomePage() {
 
         <section className="rounded-2xl border border-amber-400/20 bg-amber-400/10 p-4 sm:p-6">
           <h3 className="text-lg font-semibold text-amber-200">
-            Enfoque de esta V1
+            Enfoque de esta calculadora
           </h3>
 
           <p className="mt-3 text-sm leading-7 text-amber-100/90">
-            La app está pensada para ayudarte a calcular mejor siguiendo tus
-            guías, no para recomendar partidos automáticamente. Tus PDFs enseñan
-            la estrategia y la app ejecuta la parte numérica de forma más
-            rápida, clara y usable.
+            La calculadora ejecuta la parte numérica de cada estrategia de forma
+            rápida y clara. Tú decides la operativa, la app hace los números.
           </p>
         </section>
       </section>
+
+      <footer
+        style={{ borderTop: "1px solid #e5e7eb", padding: "1.5rem" }}
+        className="flex flex-wrap items-center justify-between gap-4 px-6"
+      >
+        <div className="flex flex-col items-start">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-iamagica.png"
+            alt="IAMagica"
+            style={{ height: "28px", width: "auto" }}
+          />
+          <span style={{ fontSize: "12px", color: "#9ca3af", marginTop: "4px" }}>
+            © 2026 IAMagica
+          </span>
+        </div>
+
+        <div className="flex flex-col items-end">
+          <span
+            style={{
+              fontSize: "12px",
+              fontWeight: 600,
+              color: "#1B4332",
+              letterSpacing: "0.5px",
+            }}
+          >
+            DIGITALIZA TU NEGOCIO
+          </span>
+          <a
+            href="mailto:info@iamagica.es"
+            style={{
+              color: "#6b7280",
+              textDecoration: "none",
+              marginTop: "4px",
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+            }}
+          >
+            <span style={{ fontSize: "20px" }}>✉</span>
+            <span style={{ fontSize: "12px" }}>info@iamagica.es</span>
+          </a>
+        </div>
+      </footer>
     </main>
   );
 }
